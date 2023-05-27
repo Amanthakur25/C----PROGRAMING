@@ -1,0 +1,532 @@
+Data Structure :- It is a way of organizing and storing data
+                 in computer memory so that it can be accessed 
+                 and modified efficiently.
+
+Alogrithms :- It is the step by step procedure to solve any problem
+                and it is independent of progrmaing languages
+
+                        Data Sturctur 
+            -----------             ----------
+            -                                -
+            Primitive                        Non-Primitive 
+            int                              -                  -
+            float                            Linear             Non Linear
+            bool                                -                   -
+            char                                -                   -
+                                                ARRAY               TREE
+                                                STACK               GRAPH
+                                                QUEUE               HASH TABLE
+                                                LinkedList        
+** Data Type := Data types are the type by which we can define the type of data.
+ 
+
+        ~ Integer :- it is non-fractional decimal values.
+                memory-4 Bytes
+                range(unsigned)- 0 to 2^32 -1.
+                range(signed)- -2^31 to 2^31 -1.
+
+        ~ Float :- it can store fractional values.
+                memory-4 Bytes.
+                can stor upto 7 decimal values.
+
+        ~ Double :- Double of float.
+                memory:-8 Bytes.
+
+        ~ Chracter :- it can store character values.
+                memory:- 1 Bytes
+
+        ~ Bool :- True Or Flase
+                memory :- 1 Byte.
+
+
+        Data Type	Size (in bytes)	Range
+        short int	    2	-32,768 to 32,767
+        unsigned short int  2	0 to 65,535
+        unsigned int	    4	0 to 4,294,967,295
+        int	            4	       -2,147,483,648 to 2,147,483,647
+        long int	    4	-2,147,483,648 to 2,147,483,647
+        unsigned long int   4	0 to 4,294,967,295
+        long long int	    8	-(2^63) to (2^63)-1
+        unsigned long long int	8	0 to 18,446,744,073,709,551,615
+        signed char	    1	-128 to 127
+        unsigned char	    1	0 to 255
+        float	            4	 
+        double	            8	 
+        long double	   12	 
+        wchar_t	2 or 4	1 wide character
+
+
+** Operator :- We can define operators as symbols that help us to perform specific
+    mathematical and logical computations on operands.
+
+        1. Arithmetic Operators: 
+
+        These operators are used to perform arithmetic/mathematical operations on operands.
+        Examples: (+, -, *, /, %,++,–)
+
+        2. Relational Operators:
+
+        These are used for the comparison of the values of two operands
+        Examples :-(==, >= , <= )
+
+        3. Logical Operators:
+
+        Logical Operators are used to combining two or more condition. The result of the operation of a    
+        logical operator is a Boolean value either true or false
+        Example:- Logical AND(&&), Logiacl OR(||).
+
+        4. Bitwise Operators: 
+
+        The Bitwise operators are used to perform bit-level operations on the operands. 
+        Exapmle :-Bitwise AND(^), Bitwise OR(~)
+
+        5. Assignment Operators: 
+
+        Assignment operators are used to assigning value to a variable.
+        Exapmle:- (=,+=,-=,*=,/=)
+
+* How to write negative number in binary form :-
+                                        Step 1:- Find out one's complement , 
+                                                opposist of that numeber 0 to 1 and 1 to 0
+                                        Step 2:- find two's complement,by adding 1
+                                                in one's complement and negative number 
+                                                will be there .
+
+** We can input space ,tab by using   cin.get()  method.
+
+** Conditional Statments 
+        
+        ~ if statement :-
+
+        if statement is the most simple decision-making statement
+
+
+        if(condition)
+        {
+                cout<<"Code Execution";
+        }
+
+       ~ if-else :-
+
+        The if statement alone tells us that if a condition is true it will execute 
+        a block of statements and if the condition is false it won’t and will move to else block
+
+        
+        if(condition)
+        {
+                cout<<"Code Execution 1";
+        }
+
+        elseif(condition 2)
+        {
+                cout<<"Code Execution 2"
+        }
+
+        else 
+        {
+                cout<<" Other Task";
+        }
+
+
+** LOOPING 
+
+        repetative execution of any task is calles looping 
+
+        ~ While Loop :-
+                perforn taske while true.
+
+        while(while_true)
+        {
+                //statment ;
+
+                update_expression;
+        }
+        
+        ~For Loop :-
+                initalize the value , check the condition and increment or decrement the value.
+        
+        for(initalization, condition ,incre)
+        {
+                //statment ;
+        }
+        
+** Switch Case :-
+
+        int n;
+
+        switch(n)
+        {
+                case 1: cout<<"one";
+                        break;
+                case 2: cout<<"second";
+                        break;
+                default: cout"any";
+        }
+
+
+** FUNCTION :- A function is a group of statements that together perform a task.
+        
+        int pow(int a,int b)
+        {
+                //statments;
+        }
+        reutrn ans;
+
+        int main
+        {
+                int a=1;
+                int b=2;
+                pow(a,b);
+        }
+
+** ARRAY :- It is a collection of similar data iten that are stored at contiguous memory locations
+
+        int arr[5];
+
+          OR
+
+        int arr[5]={1,2,3,4,5};
+
+
+** Binary Scerch :- Bi nary Search is a searching algorithm for finding an
+                         element's position in a sorted array.
+                         In this approach, the element is always searched 
+                         in the middle of a portion of an array.
+                        (Array Must be sorted)
+
+                       mid = (start+end)/2;
+                        while(start <=end){
+                                if(arr[mid]==key)
+                                        reutrn mid;
+                                elseif(arr[mid]<key){
+                                        start=start+mid;       
+                                }
+                                else{
+                                        end=mid-1;
+                                }
+                        }
+**Sorting :- It is rearranging the elements in accending or decending order.
+
+        ~ Selection sort:-Find the minium element in the unsorted array and 
+                          swap it in the begning.
+
+                        space complexity  =O(1)
+                        time complexity =O(n^2)
+                        best case and worst case =O(N^2)
+                        it could be used in small sized array
+                
+                for(int i=0;i<n-1;i++){
+                        for(int j=i+1;j<n;j++){
+                                if(arr[i]>arr[j])
+                                swap(arr[i],arr[j])
+                        }
+                }
+
+
+        ~Bubble Sort:- Swap two adjacent element if larger is at previous index,
+                        the n'th round is equavlent to n'th largest element.
+
+                        space complexity  =O(1)
+                        time complexity =O(n^2)
+                        best time complexity= O(n)
+
+                        for(int i=1;i<n;i++){
+                                 for(int j=0;j<n-i;j++){
+                                        if(arr[j]>arr[j+1])
+                                                swap(arr[j],arr[j+1])
+                                }
+                        }
+        
+        ~Insertion Sort :- insert an element frome unsorted array
+                                 to its correct position in the sorted array.
+
+                                 Time Complexity: O(n^2) 
+                                 Space: O(1)
+
+                                   int i, key, j;
+                                   for (i = 1; i < n; i++)
+                                   {
+                                       key = arr[i];
+                                       j = i - 1;
+                               
+                                       /* Move elements of arr[0..i-1], that are
+                                       greater than key, to one position ahead
+                                       of their current position */
+                                       while (j >= 0 && arr[j] > key)
+                                       {
+                                           arr[j + 1] = arr[j];
+                                           j = j - 1;
+                                       }
+                                       arr[j + 1] = key;
+                                   }
+                               }
+
+** STL :-The Standard Template Library (STL) is a set of C++ template classes to 
+         provide common programming data structures and functions such as lists,
+         stacks, arrays, etC.
+
+
+        ~Array :-
+                 #include<array>
+                 
+                 array<int,4> a={1,2,3,4};
+
+                 cout<<""element at index 2<< a.at[2]<<endl;
+
+                 cout<<first element<<a.first()<<endl;
+                 cout<<lest element<<a.last()<<endl;
+
+        ~Vector :-
+                  #include<vector>
+                  
+                  vector<int>v;  or vecotr<int> v(5,1)will make all values with zero
+
+                  cout<<"capacity"<<v.cpapcity()<<endl;
+                  
+                  v.push_back(1); //for inserting the element
+
+                  v.pop_back(); //for deleting the last element
+
+        ~Deque :-
+                 #include<deque>
+
+                 deque<int> d;
+
+                 d.push_back(1);
+                 d.push_front(2);
+
+        ~List :-
+                #include<list>
+
+                ist<int> l;
+
+                l.push_back(1);
+                l.push_back(2);
+
+        ~Stack :-
+                #include<stack>
+
+                stack<int>s;
+
+                s.push(aman);
+                s.push(singh);
+                s.push(thakur);
+
+                cout<< s.top()<<endl;
+
+                s.pop();
+        
+**Character Array
+
+        :- char ch[10];
+
+        char array will stop input when it get input of space,tab,new line(enter).
+
+        palindorme :- when the input string is equal to reverse to that
+                        string.
+
+**String class
+         :- Strings are objects that represent sequences of characters.
+
+
+**2D Array:-Two – dimensional array is the simplest form of a multidimensional array.
+                 We can see a two – dimensional array as an array of
+                 one – dimensional array for easier understanding. 
+
+                int row;
+                int column;
+                int arr[row][column];
+
+                for(int i=;<i<row;i++)
+                {
+                        for(int j=0;j<column;j++)
+                        {
+                                cin<<arr[row][column];
+                        }
+                }
+**Maths for DSA :- 
+                  ~Sieve of Eratosthenes :-
+                  Given a number n, print all primes smaller than or equal to n.
+                  It is also given that n is a small number. 
+                  
+                  Complexity:- O(n*log(logn))
+                  int seivePrime(int n)
+                  {
+                      vector<int> prime(n,0);
+                      for (int i = 2; i <=n; i++)
+                      {
+                          if(prime[i]==0)
+                          {
+                              for(int j=i*i;j<=n;j+=i)
+                              {
+                                  prime[j]=1;
+                              }
+                          }
+                      }
+                      for (int  i = 2; i <=n; i++)
+                      {
+                          if(prime[i]==0)
+                          {
+                              cout<<i<<" ";
+                          }
+                      }
+                      return 0;
+                  }
+                
+                ~GCD(greatest common diviser)/HCF
+                        Euclid’s Algorithm:- GCD(a,b)=GCD(a-b,b)
+                                
+                                GCD(72,24)=GCD(48,24)
+                                          =GCD(24,24)
+                                          =GCD(0,24)
+
+                                          ans=24.
+
+
+                ~"Basic" arithmetic
+                First off, some important identities about the modulo operator:
+
+                (a mod m)+(b mod m)  mod m=a+b  mod m
+                (a mod m)−(b mod m)  mod m=a−b  mod m
+                (a mod m)⋅(b mod m)  mod m=a⋅b  mod m
+
+
+**Pointer:- It is a variable that stores the address and its value.
+
+        TO find the address we use  ' & ' . ex:- &num;
+
+        pointer:-
+        int *ptr=&num;
+
+        arr[i]= *(arr + i)
+
+                OR
+
+        i[arr]=*(i+arr)
+
+        for interger array cout<<arr<<; //it will print the address of the array
+                                          at first index.
+
+
+        For character array cout<< ch; // it will print the value of the array.
+
+**Double Pointer :- For storing the single pointer address.
+
+
+**Reference Variable :- When a variable is declared as a reference, it becomes an 
+                        alternative name for an existing variable.
+                        A variable can be declared as a reference by 
+                        putting ‘&’ in the declaration
+
+
+                        int i=5;
+                        int &j=i;
+
+
+                        ~Pass by value :-
+                                        a(n) -------->b(n) //its is a copy by it will take 
+                                                             new memory.
+                        
+                        ~Pass by reference :-
+                                        a(n) -------->b(&n) // same memory but diff name 
+                                                                and no extera space.
+Dyanamic Memeory :-  static memory:- Stack
+                     Dyanamicmemory :- Heap
+
+                     for one D Array
+
+                     int *arr=new int[n];
+
+                     for two D array
+
+                     int **arr=new int*[n]
+                     for(int i=0;i<n;i++)
+                     {
+                        arr[i]=new int [n];
+                     }
+
+                     ~Realising or deleting the array :-
+                        for(int i=0;i<row;i++)
+                        {
+                                delete [] arr[i];
+                        }
+                        delete[]  arr[];
+
+        
+** Macros :- A macro is a piece of code in a program that is replaced by the value of the macro.
+              Macro is defined by #define directive.
+
+              #define PI 3.14             // where PI is written the value is replaced by 3.14.
+
+**Inline function:- they are used to reduce the function call overhead .
+
+                   inline int sum(int&a ,int &b)   //it must have one line to execute                                 
+                   {                                 or 2 may be execute it depends,
+                           return a+b;               but more then not be .
+                   }
+                   int main()
+                   {
+                           int a;
+                           int b;
+                           cout<<sum(a,b);
+                   }
+
+
+**RECURSION :- When a function calls it self directly or indirectly is called recursion.
+
+                ex:- 2^4 = 2 x 2^3
+                     2^n = 2 x 2^n-1
+
+                     f(n)= 2 x f(n-1)   // Recursive Relation 
+
+                ** Merge Sort :- Merge Sort is a Divide and Conquer algorithm.It divides the input array into two halves,
+                        calls itself for the two halves, and then it merges the two sorted halves. 
+
+                **Quick Sort :- Similar to the Merge Sort algorithm, the Quick Sort algorithm is a Divide and Conquer algorithm. 
+                        It initially selects an element as a pivot element and partitions the given array 
+                        around the picked pivo
+                *Power Set :- set of all subset.
+
+**OOPS :- It is typr of programming style or technique where things revolve around objects.
+
+        *Class:- it is usear defined datatype , It is a blueprint which hase some attributes
+                 and some functions within it.
+
+                 class student
+                 {
+                 public: // by default it is private;
+                     string name;
+                     int age;
+                     bool gender;
+                 };            
+                 int main()
+                {
+                   student a;
+                    a.name = "aman";
+                    a.age = 21;
+                    a.gender = 1;
+
+                    return 0;
+                }
+        **Inheritance :-accuring the properties of other class in the selected class.
+                        *single level
+                        *multilevel
+                        *multiple
+                        *hierarchical
+                        *hybride
+
+        **polymorphism:- Polymorphism means "many forms", and it occurs when
+                         we have many classes that are related to each other by inheritance
+
+                                        polymorphism
+                                ---------------------------------
+                               Copile time                      Run time
+                                   -                                 -
+                        ----------------------                       Virtual Function
+        Function overloading           Operator Overloading 
+
+
+**LinkedList :- This is a type of linear data Structure which is made up of collections of nodes. 
+                NODE(data/ address of next node)
+
+                
