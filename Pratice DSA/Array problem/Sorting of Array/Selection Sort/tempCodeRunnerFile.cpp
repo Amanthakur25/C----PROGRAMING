@@ -1,1 +1,0 @@
-find the minium element in the unsorted array and swap it in the begning 
