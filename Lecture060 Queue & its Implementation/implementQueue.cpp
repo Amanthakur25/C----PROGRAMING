@@ -12,7 +12,7 @@ public:
         qfront = 0;
         rear = 0;
     }
-
+    
     /*----------------- Public Functions of Queue -----------------*/
 
     bool isEmpty() {

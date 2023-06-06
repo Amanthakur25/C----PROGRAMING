@@ -16,7 +16,7 @@ class CircularQueue{
     bool enqueue(int value){
         //to check whther queue is full
         if( (front == 0 && rear == size-1) || (rear == (front-1)%(size-1) ) ) {
-            //cout << "Queue is Full";
+          //cout << "Queue is Full";
             return false;
         }
         else if(front == -1) //first element to push
